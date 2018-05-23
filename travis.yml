@@ -1,0 +1,21 @@
+language: java
+
+install: ./gradlew clean
+script: ./gradlew test
+
+branches:
+  only:
+    - master
+before_cache:
+  - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
+  - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
+  - rm -f $HOME/.cache/pip/log/debug.log
+  - rm -fr ./build
+  - rm -fr ./logs/*
+cache:
+  directories:
+    - $HOME/.gradle/caches/
+    - $HOME/.gradle/wrapper/
+    - $HOME/.cache/pip
+jdk:
+  - openjdk8
