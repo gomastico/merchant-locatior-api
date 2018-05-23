@@ -1,3 +1,6 @@
+#Status
+[![Build Status](https://travis-ci.org/gomastico/merchant-locatior-api.svg?branch=master)](https://travis-ci.org/gomastico/merchant-locatior-api)
+
 #Project
 Small API challenge.
 
